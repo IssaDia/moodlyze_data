@@ -1,0 +1,14 @@
+lib/
+kaggle.json
+etc/
+pyvenv.cfg
+bin/
+share/
+.DS_Store
+tweets_dataset/
+.env
+processed/
+raw/
+.ipynb_checkpoints/
+myLib/
+pipeline/
