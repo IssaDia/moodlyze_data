@@ -27,8 +27,6 @@ def preprocess(df):
     df['tweet'] = df['tweet'].apply(remove_numbers)
     df['tweet'] = df['tweet'].apply(remove_extra_spaces)
     df['tweet'] = df['tweet'].apply(replace_emojis)
-    # df['tweet'] = df['tweet'].apply(join_words)  # Reconvertir la liste en chaîne de caractères
-    # df['tweet'] = df['tweet'].apply(correct_spelling)
     df['tweet'] = df['tweet'].apply(tokenize)
    
     return df
@@ -44,7 +42,7 @@ if __name__ == "__main__":
         print("Les données ont été chargées avec succès !")
         print(f"Taille du DataFrame : {df.shape}")
         print("Premières lignes du DataFrame :")
-      #  print(df.head())
+     
     
     ddf = dd.from_pandas(df, npartitions=4)
     with ProgressBar():
